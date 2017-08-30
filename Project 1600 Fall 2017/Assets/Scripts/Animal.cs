@@ -5,7 +5,7 @@ using UnityEngine;
 public class Animal : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 		Die();
 	}
 
