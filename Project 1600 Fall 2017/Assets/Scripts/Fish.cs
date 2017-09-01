@@ -8,7 +8,8 @@ public class Fish : Animal {
 		print (this.name + " Swims");
 	}
 
-	void Start(){
+	public override void Start(){
+		base.Start ();
 		Swim ();
 	}
 }
