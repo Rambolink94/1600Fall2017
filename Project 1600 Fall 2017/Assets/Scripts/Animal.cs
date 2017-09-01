@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +26,8 @@ public class Animal : MonoBehaviour {
 	}
 }
 =======
+=======
+>>>>>>> Date
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,4 +43,7 @@ public class Animal : MonoBehaviour {
 		print (this.name + " Died");
 	}
 }
+<<<<<<< HEAD
 >>>>>>> Time
+=======
+>>>>>>> Date
