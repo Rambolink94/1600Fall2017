@@ -1,0 +1,36 @@
+As we went over in class on Wednesday, syntax is very important. Correct syntax is like correct grammer in English. Without correct grammer, people won't understand you.
+Same with Syntax. If you don't correctly write your script, the computer won't understand it, and will return errors. Here is example we used in class.
+
+void Start() {
+	int x = 10;
+	int y = 20;
+	print(y+x);
+}
+
+This will correctly print 30, because of 10+20. This is an example of the wrong syntax, or writing the code incorrectly.
+
+void Start(); {
+	int x = 10;
+	int y = 20;
+	print(y+x);
+}
+
+Do you catch the mistake? After Start(), I put a semi-colan (;). Semi-Colans are used as line enders, so the computer reads: void Start(), and nothing else. It will return
+an error like "Hey, this Start function isn't doing anything." Why? Because the line was prematurely ended. Here's an example of correct code of print a string that says
+I am Knight.
+
+void Start() {
+	print ("I am Knight");
+}
+
+Now, here it is with poor syntax.
+
+void Start(); {
+	print ("I am Knight)";
+}
+
+See the error here? The Parenthese is inside the string )" which means there will be an error. The reason is, is because the information inside the Parenthese is what will be
+printed. However, according to the computer, the parenthese never closed, because the right parenthese is in the string.
+
+
+To Conclude, Syntax is very important. If your code is written(in any way) incorrectly, you will recieve errors. So, Knight, right your code right!!!
