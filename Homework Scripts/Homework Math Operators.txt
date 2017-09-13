@@ -1,0 +1,36 @@
+There are several different math operators in C#
+They include:
++ additon. Ex. x + x
+- subtraction. Ex. x - x
+* multiplication. Ex. x * x
+/ Division. Ex. x / x
+% Modulus. Ex. x % x
+
+All of these are self explanitory, other than maybe Modulus, which divdes, but returns the remainder, rather than the division.
+
+There are also assigning signs and increment/decrement signs.
+They include:
+= Assign. Ex. int myInt = 8;
++= Increment. Ex. 1 += myInt
+-= Decrement. Ex. 100 -= myInt
+
+Assignments are very important throughout all of scripting. They assign the name of a type with a value. This can be used with any type of variable.
+Here are some examples:
+int myInt = 10;
+double myDouble = 10.5;
+bool myBool = false;
+float myFloat = 10.5;
+char myChar = 't';
+string myString = "String";
+
+An example of a good use of Decrement, which we used in class, is for health.
+
+Public int health = 100;
+
+ void Update(){
+	health -= 1;
+	Debug.Log(health);
+}
+
+This code creates an int of the name health (Which is public in Unity), then on each update, it decrements 1 from health, than prints it to the console.
+While this would decrement your health way too fast, it is a quick easy way to control health.
