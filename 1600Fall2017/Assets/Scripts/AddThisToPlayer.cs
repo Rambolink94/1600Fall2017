@@ -13,7 +13,6 @@ public class AddThisToPlayer : MonoBehaviour {
 		transform.localPosition = Vector3.zero;
 		transform.localRotation = Quaternion.identity;
 		GetComponent<BoxCollider> ().enabled = false;
-		//assetArt.SetActive(StaticVars.weaponsEnabled);
 	}
 
 }
