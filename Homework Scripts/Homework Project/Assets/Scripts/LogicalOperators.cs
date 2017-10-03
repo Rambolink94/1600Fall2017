@@ -17,6 +17,7 @@ public class LogicalOperators : MonoBehaviour {
 
     void Update()
     {
+        //Are you worthy to become king?
         if ((male == true || usurper == true) && age >= 16 && (heir == true || usurper == true))
         {
             print("You are worthy to become king");
@@ -24,6 +25,7 @@ public class LogicalOperators : MonoBehaviour {
         else {
             print("You are not worthy to become king");
         }
+        //Do you have the power to Usurpe?
         if (raisedLevies == true && (support >= 1000 || morale >= 65) && purpose == true)
         {
             print("You have the power to usurp");
@@ -31,6 +33,7 @@ public class LogicalOperators : MonoBehaviour {
         else {
             print("You do not yet have the power to usurp");
         }
+        //Are you the rightfull heir to the throne?
         if (fatherWasKing == true && youOldestSon == true)
         {
             print("You are the rightfull heir to the throne");
