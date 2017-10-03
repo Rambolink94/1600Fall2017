@@ -7,13 +7,14 @@ public class LogicalOperators : MonoBehaviour {
     public int age;
     public int support;
     public int morale;
-    public bool heir;
-    public bool usurper;
     public bool raisedLevies;
     public bool male;
     public bool purpose;
     public bool fatherWasKing;
     public bool youOldestSon;
+
+    private bool heir;
+    private bool usurper;
 
     void Update()
     {
