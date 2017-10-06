@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class voidFunctions : MonoBehaviour {
+public class soldier76Movement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
