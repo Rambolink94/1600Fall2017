@@ -42,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 9
   m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 8
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -87,7 +87,7 @@ LightmapSettings:
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_ShadowMaskMode: 2
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -156,20 +156,6 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_FalloffTable:
-    m_Table[0]: 0
-    m_Table[1]: 0
-    m_Table[2]: 0
-    m_Table[3]: 0
-    m_Table[4]: 0
-    m_Table[5]: 0
-    m_Table[6]: 0
-    m_Table[7]: 0
-    m_Table[8]: 0
-    m_Table[9]: 0
-    m_Table[10]: 0
-    m_Table[11]: 0
-    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -214,14 +200,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69f0118792f35694790fe38658da8128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalFood:
+  - Bananas
+  - Apples
+  - Grapes
+  - Chicken
+  foodCount: 0a000000020000001e00000001000000
 --- !u!4 &687650787
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 687650785}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.180198, y: 4.0752006, z: 0.034084022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -254,6 +246,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb05b4290063fc7488c9f35b0fc0f594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalFood:
+  - Bananas
+  - Apples
+  - Grapes
+  - Chicken
+  foodCount: 0a000000020000001e00000001000000
 --- !u!4 &720297528
 Transform:
   m_ObjectHideFlags: 0
@@ -261,7 +259,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 720297526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.180198, y: 4.0752006, z: 0.034084022}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -294,14 +292,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18587925ced90f844a772bbc22979e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalFood:
+  - Bananas
+  - Apples
+  - Grapes
+  - Chicken
+  foodCount: 0a000000020000001e00000001000000
 --- !u!4 &754310326
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 754310324}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.180198, y: 4.0752006, z: 0.034084022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -423,18 +427,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d93e26c805fb7d489be20d1fee1b84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalFood:
+  - Bananas
+  - Apples
+  - Grapes
+  - Chicken
+  foodCount: 0a000000020000001e00000001000000
 --- !u!4 &814829802
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 814829800}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.180198, y: 4.0752006, z: 0.034084022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1030367478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1030367480}
+  - component: {fileID: 1030367479}
+  m_Layer: 0
+  m_Name: Fox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1030367479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1030367478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb05b4290063fc7488c9f35b0fc0f594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalFood:
+  - Bananas
+  - Apples
+  - Grapes
+  - Chicken
+  foodCount: 0a000000020000001e00000001000000
+--- !u!4 &1030367480
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1030367478}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1146587101
 GameObject:
@@ -463,14 +519,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454d14ee10bbf054ab476f57a7da6db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalFood:
+  - Bananas
+  - Apples
+  - Grapes
+  - Chicken
+  foodCount: 0a000000020000001e00000001000000
 --- !u!4 &1146587103
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1146587101}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.180198, y: 4.0752006, z: 0.034084022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -503,14 +565,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da3b85dbf45a9e247a5c4d80253b0611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalFood:
+  - Bananas
+  - Apples
+  - Grapes
+  - Chicken
+  foodCount: 0a000000020000001e00000001000000
 --- !u!4 &1349364576
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1349364574}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.180198, y: 4.0752006, z: 0.034084022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -543,14 +611,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dbbb4fd00433c0478f34ac0dca82c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalFood:
+  - Bananas
+  - Apples
+  - Grapes
+  - Chicken
+  foodCount: 0a000000020000001e00000001000000
 --- !u!4 &1448528199
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1448528197}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.180198, y: 4.0752006, z: 0.034084022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

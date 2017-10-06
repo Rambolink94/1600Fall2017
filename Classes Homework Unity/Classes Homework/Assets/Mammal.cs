@@ -1,16 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿﻿using System.Collections; 
+using System.Collections.Generic; 
+using UnityEngine; 
 
-public class Mammal : Animal {
+public class Mammal : Animal { 
+	public override void Start(){ 
+		base.Start (); 
+		Shed (); 
+	} 
+	void Shed(){ 
+		print (this.name + " Shed"); 
+	} 
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-}
+} 

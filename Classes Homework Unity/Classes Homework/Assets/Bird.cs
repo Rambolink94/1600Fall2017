@@ -1,16 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿﻿using System.Collections; 
+using System.Collections.Generic; 
+using UnityEngine; 
 
-public class Bird : Animal {
+public class Bird : Animal { 
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-}
+	public override void Start(){ 
+		base.Start (); 
+		Fly (); 
+	} 
+
+	void Fly (){ 
+		print(this.name + " Flies"); 
+	} 
+
+} 

@@ -1,18 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿﻿using System.Collections; 
+using System.Collections.Generic; 
+using UnityEngine; 
 
-public class Whale : Animal {
+public class Whale : Mammal { 
 
-	// Use this for initialization
-	void Start () {
-		Die();
-
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-}
+	public override void Start(){ 
+		base.Start (); 
+		Jet (); 
+	} 
+	void Jet(){ 
+		print (this.name + " Jet"); 
+	} 
+} 
