@@ -6,7 +6,9 @@ public class DropWeapon : MonoBehaviour {
 
 	public Transform weapon;
 
-	void OnTriggerEnter(){
-		weapon.parent = null;
+	void Update(){
+		if (Input.GetKeyDown (KeyCode.T)) {
+			weapon.parent = null;
+		}
 	}
 }
