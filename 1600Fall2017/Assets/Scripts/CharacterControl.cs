@@ -6,7 +6,7 @@ public class CharacterControl : MonoBehaviour {
 
 	public CharacterController characterController;
 	public float speed = 10;
-	public float gravity = 9.81f;
+	public float gravity = 3f;
 	public Vector3 moveVector3;
 	public float jumpForce = 20;
 
@@ -16,18 +16,17 @@ public class CharacterControl : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		moveVector3.y -= gravity * Time.deltaTime;
 
 		if (characterController.isGrounded) 
 		{
-			if (Input.GetKey (KeyCode.Space)) 
+			if (Input.GetKeyDown (KeyCode.Space)) 
 			{
-				moveVector3.y += jumpForce * Time.deltaTime;
+				moveVector3.y = jumpForce * Time.deltaTime;
 			}
-			moveVector3.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
 		}
-
+		moveVector3.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
 		characterController.Move (moveVector3);
 	}
 }
