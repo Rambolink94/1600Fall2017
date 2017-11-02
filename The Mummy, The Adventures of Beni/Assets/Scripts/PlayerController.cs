@@ -2,29 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
-
-    public CharacterController characterController;
-
+public class PlayerController : MonoBehaviour
+{
+    public Rigidbody2D rb;
     public float speed = 10;
-    public float gravity = 3f;
     public float jumpForce = 20;
+    public bool facingRight = true;
 
-    public Vector3 movement;
-
-    void Update()
+    void Start()
     {
-        movement.y -= gravity * Time.deltaTime;
+        rb = GetComponent<Rigidbody2D>();
+    }
 
-        if (characterController.isGrounded)
+    void FixedUpdate()
+    {
+        float move = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(move * speed, rb.velocity.y);
+        if (move > 0 && !facingRight)
         {
-            if (Input.GetKey(KeyCode.Space))
-            {
-                movement.y += jumpForce * Time.deltaTime;
-            }
-            movement.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+            Flip();
+        } else if (move < 0 && facingRight)
+        {
+            Flip();
         }
-        movement.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        characterController.Move(movement);
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 }
