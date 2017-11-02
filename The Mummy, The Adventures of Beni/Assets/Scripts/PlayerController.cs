@@ -5,18 +5,30 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public Animator anim;
+    public Transform groundCheck;
+    public LayerMask learnGround;
+
     public float speed = 10;
-    public float jumpForce = 20;
+    public float groundRadius = 0.2f;
+    public float jumpForce = 1700f;
+
     public bool facingRight = true;
+    public bool isGrounded = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, learnGround);
+        anim.SetBool("Ground", isGrounded);
+        anim.SetFloat("vSpeed", rb.velocity.y);
         float move = Input.GetAxis("Horizontal");
+        anim.SetFloat("Speed", Mathf.Abs(move));
         rb.velocity = new Vector2(move * speed, rb.velocity.y);
         if (move > 0 && !facingRight)
         {
@@ -24,6 +36,15 @@ public class PlayerController : MonoBehaviour
         } else if (move < 0 && facingRight)
         {
             Flip();
+        }
+    }
+
+    void Update()
+    {
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetBool("Ground", false);
+            rb.AddForce(new Vector2(0, jumpForce));
         }
     }
 
