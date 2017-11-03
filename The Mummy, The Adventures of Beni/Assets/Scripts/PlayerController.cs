@@ -2,29 +2,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
-
-    public CharacterController characterController;
+public class PlayerController : MonoBehaviour
+{
+    public Rigidbody2D rb;
+    public Animator anim;
+    public Transform groundCheck;
+    public LayerMask learnGround;
 
     public float speed = 10;
-    public float gravity = 3f;
-    public float jumpForce = 20;
+    public float groundRadius = 0.2f;
+    public float jumpForce = 1700f;
 
-    public Vector3 movement;
+    public bool facingRight = true;
+    public bool isGrounded = false;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+    }
+
+    void FixedUpdate()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, learnGround);
+        anim.SetBool("Ground", isGrounded);
+        anim.SetFloat("vSpeed", rb.velocity.y);
+        float move = Input.GetAxis("Horizontal");
+        anim.SetFloat("Speed", Mathf.Abs(move));
+        rb.velocity = new Vector2(move * speed, rb.velocity.y);
+        if (move > 0 && !facingRight)
+        {
+            Flip();
+        } else if (move < 0 && facingRight)
+        {
+            Flip();
+        }
+    }
 
     void Update()
     {
-        movement.y -= gravity * Time.deltaTime;
-
-        if (characterController.isGrounded)
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
-            if (Input.GetKey(KeyCode.Space))
-            {
-                movement.y += jumpForce * Time.deltaTime;
-            }
-            movement.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+            anim.SetBool("Ground", false);
+            rb.AddForce(new Vector2(0, jumpForce));
         }
-        movement.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        characterController.Move(movement);
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 }

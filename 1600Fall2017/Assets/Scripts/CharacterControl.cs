@@ -26,9 +26,11 @@ public class CharacterControl : MonoBehaviour {
 			{
 				moveVector3.y = jumpForce * Time.deltaTime;
 			}
-			moveVector3.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+            movement.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         }
 		moveVector3.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
 		characterController.Move (moveVector3);
 	}
 }
+
+			moveVector3.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
