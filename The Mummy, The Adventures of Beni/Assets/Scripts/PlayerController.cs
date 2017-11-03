@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 10;
     public float groundRadius = 0.2f;
-    public float jumpForce = 1700f;
+    public float jumpForce = 700f;
 
     public bool facingRight = true;
     public bool isGrounded = false;
