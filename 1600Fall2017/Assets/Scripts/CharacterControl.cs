@@ -11,12 +11,6 @@ public class CharacterControl : MonoBehaviour {
 	public Vector3 moveVector3;
 	public float jumpForce = 20;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
 	void Update () {
 		moveVector3.y -= gravity * Time.deltaTime;
 
@@ -26,11 +20,9 @@ public class CharacterControl : MonoBehaviour {
 			{
 				moveVector3.y = jumpForce * Time.deltaTime;
 			}
-            movement.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+			moveVector3.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         }
 		moveVector3.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
 		characterController.Move (moveVector3);
 	}
 }
-
-			moveVector3.x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
