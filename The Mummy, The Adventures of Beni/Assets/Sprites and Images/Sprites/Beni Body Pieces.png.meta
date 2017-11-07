@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a07970b09ea44bc4381e6467fcc1160e
-timeCreated: 1509402500
+timeCreated: 1510045568
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,6 +14,21 @@ TextureImporter:
     21300014: Beni_RightLeg
     21300016: Beni_RightFoot
     21300018: Beni_LeftFoot
+    21300020: Head
+    21300022: LeftHand
+    21300024: GunHand
+    21300026: Torso
+    21300028: RightHand
+    21300030: Lower_RightArm
+    21300032: Upper_RightArm
+    21300034: Upper_LeftArm
+    21300036: Upper_RightLeg
+    21300038: Upper_LeftLeg
+    21300040: Lower_LeftArm
+    21300042: Lower_RightLeg
+    21300044: Lower_LeftLeg
+    21300046: RightFoot
+    21300048: LeftFoot
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -93,141 +108,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Beni_Head
+      name: Head
       rect:
         serializedVersion: 2
         x: 116
         y: 408
         width: 62
         height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.7743127, y: 0.16351023}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Beni_RightHand
+      name: LeftHand
       rect:
         serializedVersion: 2
         x: 204
         y: 455
         width: 38
         height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.8759525, y: 0.794182}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Beni_Body
+      name: GunHand
       rect:
         serializedVersion: 2
-        x: 279
-        y: 355
-        width: 102
-        height: 146
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 258
+        y: 462
+        width: 42
+        height: 30
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Beni_LeftHand
+      name: Torso
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 358
+        width: 102
+        height: 146
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightHand
       rect:
         serializedVersion: 2
         x: 210
         y: 418
         width: 24
         height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.88266563, y: 0.7993298}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Beni_RightArm
+      name: Lower_RightArm
       rect:
         serializedVersion: 2
-        x: 118
-        y: 240
-        width: 64
-        height: 166
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 22
+        y: 308
+        width: 55
+        height: 88
+      alignment: 9
+      pivot: {x: 0.83637655, y: 0.97143656}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Beni_LeftArm
+      name: Upper_RightArm
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 311
+        width: 35
+        height: 85
+      alignment: 9
+      pivot: {x: 0.9565107, y: 0.96828866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Upper_LeftArm
       rect:
         serializedVersion: 2
         x: 189
-        y: 261
-        width: 72
-        height: 145
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 323
+        width: 64
+        height: 83
+      alignment: 9
+      pivot: {x: 0.039940596, y: 0.7100466}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Beni_LeftLeg
+      name: Upper_RightLeg
       rect:
         serializedVersion: 2
-        x: 274
-        y: 113
-        width: 98
-        height: 230
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5
+        y: 168
+        width: 96
+        height: 106
+      alignment: 9
+      pivot: {x: 0.85034436, y: 0.869506}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Beni_RightLeg
+      name: Upper_LeftLeg
       rect:
         serializedVersion: 2
-        x: 116
-        y: 18
-        width: 111
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 120
+        y: 154
+        width: 77
+        height: 123
+      alignment: 9
+      pivot: {x: 0.466826, y: 0.90842867}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Beni_RightFoot
+      name: Lower_LeftArm
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 223
+        width: 53
+        height: 73
+      alignment: 9
+      pivot: {x: 0.4707607, y: 0.9564113}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lower_RightLeg
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 16
+        width: 59
+        height: 128
+      alignment: 9
+      pivot: {x: 0.69823754, y: 0.96418536}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lower_LeftLeg
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 17
+        width: 60
+        height: 120
+      alignment: 9
+      pivot: {x: 0.32066116, y: 0.9756378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightFoot
       rect:
         serializedVersion: 2
         x: 249
         y: 19
         width: 54
         height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.83788496, y: 0.9540799}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Beni_LeftFoot
+      name: LeftFoot
       rect:
         serializedVersion: 2
         x: 325
         y: 19
         width: 38
         height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.25376812, y: 0.9408497}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

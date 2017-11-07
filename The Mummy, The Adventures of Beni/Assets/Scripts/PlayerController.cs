@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    // Created this script with lots of help from a Unity player controller tutorial.
+    // https://unity3d.com/learn/tutorials/topics/2d-game-creation/2d-character-controllers
+
     public Rigidbody2D rb;
     public Animator anim;
     public Transform groundCheck;
