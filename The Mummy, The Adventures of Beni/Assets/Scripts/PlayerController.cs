@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, learnGround);
         anim.SetBool("Ground", isGrounded);
-        anim.SetFloat("vSpeed", rb.velocity.y);
         float move = Input.GetAxis("Horizontal");
         anim.SetFloat("Speed", Mathf.Abs(move));
         rb.velocity = new Vector2(move * speed, rb.velocity.y);
