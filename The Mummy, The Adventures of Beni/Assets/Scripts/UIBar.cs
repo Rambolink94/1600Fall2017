@@ -6,7 +6,6 @@ public class UIBar : MonoBehaviour {
 
 	public GameObject gameOverUI;
 	public Image bar;
-	public Text checkpointText;
 	public Text endGameText;
 	public Text coinNum;
 	public int totalCoinValue;
@@ -20,7 +19,7 @@ public class UIBar : MonoBehaviour {
 		PowerDown,
 		CollectCoin,
 		Win,
-		Checkpoint
+        Checkpoint
 	}
 
 	public PowerUpType powerUp;
@@ -40,10 +39,11 @@ public class UIBar : MonoBehaviour {
 		case PowerUpType.Win:
 			EndGame ("You Win!");
 			break;
-		case PowerUpType.Checkpoint:
-			Checkpoint ("Checkpoint!");
-			break;
-		}
+            case PowerUpType.Checkpoint:
+                Checkpoint();
+                break;
+
+        }
 	}
 
 	// Collects Coins
@@ -80,6 +80,7 @@ public class UIBar : MonoBehaviour {
 		}
 		while(bar.fillAmount > tempAmount) 
 		{
+            Debug.Log("Something is happening");
 			bar.fillAmount -= amountToAdd;
 			yield return new WaitForSeconds (amountToAdd);
 		}
@@ -93,12 +94,10 @@ public class UIBar : MonoBehaviour {
 	void EndGame (string _text) {
 		endGameText.text = _text;
 		gameOverUI.SetActive (true);
-		CharacterControl.gameOver = true;
+		PlayerController.gameOver = true;
 	}
 
-	// Creates a Checkpoint
-	void Checkpoint (string _text) {
-		checkpointText.text = _text;
-		ReplayGame.startPosition = transform.position;
-	}
+    void Checkpoint() {
+
+    }
 }

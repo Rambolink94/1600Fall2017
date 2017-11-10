@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     public bool facingRight = true;
     public bool isGrounded = false;
+    public static bool gameOver = true;
 
     void Start()
     {
