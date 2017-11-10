@@ -96,6 +96,7 @@ public class UIBar : MonoBehaviour {
 		CharacterControl.gameOver = true;
 	}
 
+	// Creates a Checkpoint
 	void Checkpoint (string _text) {
 		checkpointText.text = _text;
 		ReplayGame.startPosition = transform.position;
