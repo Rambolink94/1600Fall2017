@@ -86,7 +86,6 @@ public class UIBar : MonoBehaviour {
 		}
 		while(hBar.fillAmount > tempAmount) 
 		{
-            Debug.Log("Something is happening");
 			hBar.fillAmount -= amountToAdd;
 			yield return new WaitForSeconds (amountToAdd);
 		}
@@ -97,7 +96,6 @@ public class UIBar : MonoBehaviour {
 	}
 
 	IEnumerator PowerPowerBar () {
-		Debug.Log ("You reached this code.");
 		float tempAmount = pBar.fillAmount + powerPowerLevel;
 		if (tempAmount > 1) 
 		{
