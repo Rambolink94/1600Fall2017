@@ -100,5 +100,6 @@ public class UIBar : MonoBehaviour {
 	void Checkpoint (string _text) {
 		checkpointText.text = _text;
 		ReplayGame.startPosition = transform.position;
+		Debug.Log ("Code got here");
 	}
 }
