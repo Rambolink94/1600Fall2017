@@ -1,7 +1,12 @@
 fileFormatVersion: 2
 guid: a22047897d8a717468d744ee1e455085
+<<<<<<< HEAD
 timeCreated: 1510596293
 licenseType: Pro
+=======
+timeCreated: 1510345983
+licenseType: Free
+>>>>>>> Character
 TextureImporter:
   fileIDToRecycleName:
     21300000: Coin
@@ -98,10 +103,17 @@ TextureImporter:
       name: Power
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 258
         y: 260
         width: 249
         height: 251
+=======
+        x: 267
+        y: 256
+        width: 245
+        height: 256
+>>>>>>> Character
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,8 +125,13 @@ TextureImporter:
         serializedVersion: 2
         x: 1
         y: 0
+<<<<<<< HEAD
         width: 254
         height: 255
+=======
+        width: 255
+        height: 256
+>>>>>>> Character
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
