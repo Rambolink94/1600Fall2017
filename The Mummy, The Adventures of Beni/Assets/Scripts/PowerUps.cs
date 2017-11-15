@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIBar : MonoBehaviour {
+public class PowerUps : MonoBehaviour {
 
 	public GameObject gameOverUI;
 	public Image hBar;
@@ -21,8 +21,7 @@ public class UIBar : MonoBehaviour {
 		PowerDown,
 		PowerPower,
 		CollectCoin,
-		Win,
-        Checkpoint
+		Win
 	}
 
 	public PowerUpType powerUp;
@@ -45,10 +44,6 @@ public class UIBar : MonoBehaviour {
 		case PowerUpType.Win:
 			EndGame ("You Win!");
 			break;
-            case PowerUpType.Checkpoint:
-                Checkpoint();
-                break;
-
         }
 	}
 
@@ -95,6 +90,7 @@ public class UIBar : MonoBehaviour {
 		}
 	}
 
+    // Decreases Power
 	IEnumerator PowerPowerBar () {
 		float tempAmount = pBar.fillAmount + powerPowerLevel;
 		if (tempAmount > 1) 
@@ -114,8 +110,4 @@ public class UIBar : MonoBehaviour {
 		gameOverUI.SetActive (true);
 		PlayerController.gameOver = true;
 	}
-
-    void Checkpoint() {
-
-    }
 }

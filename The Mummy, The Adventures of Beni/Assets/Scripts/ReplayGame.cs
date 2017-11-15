@@ -4,8 +4,11 @@ using UnityEngine.UI;
 public class ReplayGame : MonoBehaviour {
 
 	public Transform player;
-	public Image uiBar;
+	public Image hBar;
+    public Image pBar;
+    public Image sBar;
 	public GameObject gameOverUI;
+    public GameObject spReference;
 	public static Vector3 startPosition;
 
 	private float fillAmount;
@@ -13,7 +16,10 @@ public class ReplayGame : MonoBehaviour {
 	void Awake () 
 	{
 		startPosition = player.position;
-		fillAmount = uiBar.fillAmount;
+        spReference.transform.position = player.position;
+		fillAmount = hBar.fillAmount;
+        fillAmount = pBar.fillAmount;
+        fillAmount = sBar.fillAmount;
 		gameOverUI.SetActive (false);
 	}
 
@@ -21,7 +27,9 @@ public class ReplayGame : MonoBehaviour {
 	{
 		PlayerController.gameOver = false;
 		player.position = startPosition;
-		uiBar.fillAmount = fillAmount;
-		gameOverUI.SetActive (false);
+		hBar.fillAmount = fillAmount;
+        pBar.fillAmount = fillAmount;
+        sBar.fillAmount = fillAmount;
+        gameOverUI.SetActive (false);
 	}
 }
