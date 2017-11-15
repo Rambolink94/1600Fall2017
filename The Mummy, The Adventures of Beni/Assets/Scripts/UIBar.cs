@@ -5,18 +5,21 @@ using UnityEngine.UI;
 public class UIBar : MonoBehaviour {
 
 	public GameObject gameOverUI;
-	public Image bar;
+	public Image hBar;
+	public Image pBar;
 	public Text endGameText;
 	public Text coinNum;
 	public int totalCoinValue;
 	public int coinValue = 10;
-	public float powerLevel = 0.1f;
+	public float healthPowerLevel = 0.1f;
+	public float powerPowerLevel = 0.1f;
 	public float amountToAdd = 0.01f;
 
 	public enum PowerUpType
 	{
 		PowerUP,
 		PowerDown,
+		PowerPower,
 		CollectCoin,
 		Win,
         Checkpoint
@@ -24,7 +27,7 @@ public class UIBar : MonoBehaviour {
 
 	public PowerUpType powerUp;
 
-	void OnTriggerEnter () {
+	void OnTriggerEnter2D () {
 		switch (powerUp)
 		{
 		case PowerUpType.PowerUP:
@@ -32,6 +35,9 @@ public class UIBar : MonoBehaviour {
 			break;
 		case PowerUpType.PowerDown:
 			StartCoroutine (PowerDownBar());
+			break;
+		case PowerUpType.PowerPower:
+			StartCoroutine (PowerPowerBar());
 			break;
 		case PowerUpType.CollectCoin:
 			StartCoroutine (CollectCoin());
@@ -59,34 +65,48 @@ public class UIBar : MonoBehaviour {
 
 	// Increasing Health
 	IEnumerator PowerUpBar () {
-		float tempAmount = bar.fillAmount + powerLevel;
+		float tempAmount = hBar.fillAmount + healthPowerLevel;
 		if (tempAmount > 1) 
 		{
 			tempAmount = 1;
 		}
-		while(bar.fillAmount < tempAmount) 
+		while(hBar.fillAmount < tempAmount) 
 		{
-			bar.fillAmount += amountToAdd;
+			hBar.fillAmount += amountToAdd;
 			yield return new WaitForSeconds (amountToAdd);
 		}
 	}
 
 	// Decreasing Health
 	IEnumerator PowerDownBar () {
-		float tempAmount = bar.fillAmount - powerLevel;
+		float tempAmount = hBar.fillAmount - healthPowerLevel;
 		if (tempAmount < 0) 
 		{
 			tempAmount = 0;
 		}
-		while(bar.fillAmount > tempAmount) 
+		while(hBar.fillAmount > tempAmount) 
 		{
             Debug.Log("Something is happening");
-			bar.fillAmount -= amountToAdd;
+			hBar.fillAmount -= amountToAdd;
 			yield return new WaitForSeconds (amountToAdd);
 		}
 
-		if (bar.fillAmount == 0) {
+		if (hBar.fillAmount == 0) {
 			EndGame ("Game Over");
+		}
+	}
+
+	IEnumerator PowerPowerBar () {
+		Debug.Log ("You reached this code.");
+		float tempAmount = pBar.fillAmount + powerPowerLevel;
+		if (tempAmount > 1) 
+		{
+			tempAmount = 1;
+		}
+		while(pBar.fillAmount < tempAmount) 
+		{
+			pBar.fillAmount += amountToAdd;
+			yield return new WaitForSeconds (amountToAdd);
 		}
 	}
 
