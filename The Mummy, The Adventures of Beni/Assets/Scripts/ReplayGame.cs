@@ -13,7 +13,7 @@ public class ReplayGame : MonoBehaviour {
 
 	private float fillAmount;
 
-	void Awake () 
+	void Start () 
 	{
 		startPosition = player.position;
         spReference.transform.position = player.position;

@@ -9,12 +9,13 @@ public class PlayerAbilities : MonoBehaviour {
     public Image sBar;
 	public float powerUsage = 0.1f;
     public float specialUsage = 1;
+    public ParticleSystem healthParticles;
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
 		if (Input.GetKeyDown (KeyCode.F)) 
 		{
-			pBar.fillAmount -= powerUsage;
+            pBar.fillAmount -= powerUsage;
 		}
         if (Input.GetKeyDown(KeyCode.R))
         {
