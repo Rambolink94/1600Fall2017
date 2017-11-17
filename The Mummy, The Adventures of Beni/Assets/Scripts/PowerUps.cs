@@ -14,6 +14,7 @@ public class PowerUps : MonoBehaviour {
 	public float healthPowerLevel = 0.1f;
 	public float powerPowerLevel = 0.1f;
 	public float amountToAdd = 0.01f;
+    public GameObject spReference;
 
 	public enum PowerUpType
 	{
@@ -21,6 +22,7 @@ public class PowerUps : MonoBehaviour {
 		PowerDown,
 		PowerPower,
 		CollectCoin,
+        CheckPoint,
 		Win
 	}
 
@@ -41,6 +43,9 @@ public class PowerUps : MonoBehaviour {
 		case PowerUpType.CollectCoin:
 			StartCoroutine (CollectCoin());
 			break;
+        case PowerUpType.CheckPoint:
+            CheckPoint();
+            break;
 		case PowerUpType.Win:
 			EndGame ("You Win!");
 			break;
@@ -103,6 +108,12 @@ public class PowerUps : MonoBehaviour {
 			yield return new WaitForSeconds (amountToAdd);
 		}
 	}
+
+    // Checkpoint
+    void CheckPoint() {
+        Debug.Log("Got here");
+        spReference.transform.position = gameObject.transform.position;
+    }
 
 	// Ends the Game
 	void EndGame (string _text) {

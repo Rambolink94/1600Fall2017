@@ -16,6 +16,7 @@ public class PlayerAbilities : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.F)) 
 		{
             pBar.fillAmount -= powerUsage;
+            
 		}
         if (Input.GetKeyDown(KeyCode.R))
         {

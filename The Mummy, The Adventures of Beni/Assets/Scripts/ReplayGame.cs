@@ -9,14 +9,13 @@ public class ReplayGame : MonoBehaviour {
     public Image sBar;
 	public GameObject gameOverUI;
     public GameObject spReference;
-	public static Vector3 startPosition;
+	public static Vector3 oldPosition;
 
 	private float fillAmount;
 
 	void Start () 
 	{
-		startPosition = player.position;
-        spReference.transform.position = player.position;
+        oldPosition = spReference.transform.position;
 		fillAmount = hBar.fillAmount;
         fillAmount = pBar.fillAmount;
         fillAmount = sBar.fillAmount;
@@ -26,7 +25,7 @@ public class ReplayGame : MonoBehaviour {
 	public void ClickReplay () 
 	{
 		PlayerController.gameOver = false;
-		player.position = startPosition;
+        player.position = oldPosition;
 		hBar.fillAmount = fillAmount;
         pBar.fillAmount = fillAmount;
         sBar.fillAmount = fillAmount;
