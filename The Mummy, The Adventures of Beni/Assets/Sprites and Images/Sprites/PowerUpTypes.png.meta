@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a22047897d8a717468d744ee1e455085
-timeCreated: 1510776024
+timeCreated: 1510949526
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -118,10 +118,10 @@ TextureImporter:
       name: Health
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 255
-        height: 255
+        x: 1
+        y: 1
+        width: 253
+        height: 254
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
