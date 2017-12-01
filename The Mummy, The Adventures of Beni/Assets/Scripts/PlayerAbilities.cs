@@ -24,6 +24,7 @@ public class PlayerAbilities : MonoBehaviour {
             pBar.fillAmount -= powerUsage;
             var em = healthParticles.emission;
             em.enabled = true;
+            Debug.Log("Das code hath been here");
 		}
         if (Input.GetKeyDown(KeyCode.R))
         {
