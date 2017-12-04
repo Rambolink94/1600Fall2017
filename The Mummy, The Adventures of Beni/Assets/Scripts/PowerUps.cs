@@ -119,6 +119,7 @@ public class PowerUps : MonoBehaviour {
 	void EndGame (string _text) {
 		endGameText.text = _text;
 		gameOverUI.SetActive (true);
+        Debug.Log("Got here");
 		PlayerController.gameOver = true;
 	}
 }

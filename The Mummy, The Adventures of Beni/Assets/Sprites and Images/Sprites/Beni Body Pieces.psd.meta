@@ -1,34 +1,25 @@
 fileFormatVersion: 2
-guid: a07970b09ea44bc4381e6467fcc1160e
-timeCreated: 1510045568
+guid: e1da9e63463e2ea47bee29e5af2c9d60
+timeCreated: 1512354504
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Beni_Head
-    21300002: Beni_RightHand
-    21300004: Beni_Body
-    21300006: Beni_LeftHand
-    21300008: Beni_RightArm
-    21300010: Beni_LeftArm
-    21300012: Beni_LeftLeg
-    21300014: Beni_RightLeg
-    21300016: Beni_RightFoot
-    21300018: Beni_LeftFoot
-    21300020: Head
-    21300022: LeftHand
-    21300024: GunHand
-    21300026: Torso
-    21300028: RightHand
-    21300030: Lower_RightArm
-    21300032: Upper_RightArm
-    21300034: Upper_LeftArm
-    21300036: Upper_RightLeg
-    21300038: Upper_LeftLeg
-    21300040: Lower_LeftArm
-    21300042: Lower_RightLeg
-    21300044: Lower_LeftLeg
-    21300046: RightFoot
-    21300048: LeftFoot
+    21300000: Head
+    21300002: L_Hand
+    21300004: R_HandGunHold
+    21300006: Chest
+    21300008: R_Hand
+    21300010: R_LowerArm
+    21300012: R_UpperArm
+    21300014: L_UpperArm
+    21300016: R_UpperLeg
+    21300018: L_UpperLeg
+    21300020: L_LowerArm
+    21300022: R_LowerLeg
+    21300024: L_LowerLeg
+    21300026: R_Foot
+    21300028: L_Foot
+    21300030: GunRevolver
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -116,13 +107,13 @@ TextureImporter:
         width: 62
         height: 93
       alignment: 9
-      pivot: {x: 0.7743127, y: 0.16351023}
+      pivot: {x: 0.83807075, y: 0.10124978}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LeftHand
+      name: L_Hand
       rect:
         serializedVersion: 2
         x: 204
@@ -130,33 +121,33 @@ TextureImporter:
         width: 38
         height: 37
       alignment: 9
-      pivot: {x: 0.8759525, y: 0.794182}
+      pivot: {x: 0.8302805, y: 0.81956273}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: GunHand
+      name: R_HandGunHold
       rect:
         serializedVersion: 2
         x: 258
         y: 462
         width: 42
         height: 30
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.98626053, y: 0.45521343}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Torso
+      name: Chest
       rect:
         serializedVersion: 2
         x: 345
-        y: 358
+        y: 341
         width: 102
-        height: 146
+        height: 163
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,7 +155,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: RightHand
+      name: R_Hand
       rect:
         serializedVersion: 2
         x: 210
@@ -172,13 +163,13 @@ TextureImporter:
         width: 24
         height: 25
       alignment: 9
-      pivot: {x: 0.88266563, y: 0.7993298}
+      pivot: {x: 0.81350964, y: 0.86546266}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Lower_RightArm
+      name: R_LowerArm
       rect:
         serializedVersion: 2
         x: 22
@@ -186,27 +177,27 @@ TextureImporter:
         width: 55
         height: 88
       alignment: 9
-      pivot: {x: 0.83637655, y: 0.97143656}
+      pivot: {x: 0.8562431, y: 0.96311605}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Upper_RightArm
+      name: R_UpperArm
       rect:
         serializedVersion: 2
         x: 96
         y: 311
-        width: 35
+        width: 43
         height: 85
       alignment: 9
-      pivot: {x: 0.9565107, y: 0.96828866}
+      pivot: {x: 0.9738862, y: 0.78122234}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Upper_LeftArm
+      name: L_UpperArm
       rect:
         serializedVersion: 2
         x: 189
@@ -214,83 +205,83 @@ TextureImporter:
         width: 64
         height: 83
       alignment: 9
-      pivot: {x: 0.039940596, y: 0.7100466}
+      pivot: {x: 0.034657717, y: 0.7030158}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Upper_RightLeg
+      name: R_UpperLeg
       rect:
         serializedVersion: 2
         x: 5
         y: 168
         width: 96
-        height: 106
+        height: 109
       alignment: 9
-      pivot: {x: 0.85034436, y: 0.869506}
+      pivot: {x: 0.9041131, y: 0.9565794}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Upper_LeftLeg
+      name: L_UpperLeg
       rect:
         serializedVersion: 2
         x: 120
         y: 154
         width: 77
-        height: 123
+        height: 128
       alignment: 9
-      pivot: {x: 0.466826, y: 0.90842867}
+      pivot: {x: 0.42875135, y: 0.97146535}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Lower_LeftArm
+      name: L_LowerArm
       rect:
         serializedVersion: 2
         x: 243
         y: 223
         width: 53
-        height: 73
+        height: 75
       alignment: 9
-      pivot: {x: 0.4707607, y: 0.9564113}
+      pivot: {x: 0.40388173, y: 0.99114054}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Lower_RightLeg
+      name: R_LowerLeg
       rect:
         serializedVersion: 2
         x: 25
         y: 16
         width: 59
-        height: 128
+        height: 133
       alignment: 9
-      pivot: {x: 0.69823754, y: 0.96418536}
+      pivot: {x: 0.8121656, y: 0.97436583}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Lower_LeftLeg
+      name: L_LowerLeg
       rect:
         serializedVersion: 2
         x: 103
         y: 17
         width: 60
-        height: 120
+        height: 125
       alignment: 9
-      pivot: {x: 0.32066116, y: 0.9756378}
+      pivot: {x: 0.29100418, y: 0.99532044}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: RightFoot
+      name: R_Foot
       rect:
         serializedVersion: 2
         x: 249
@@ -298,13 +289,13 @@ TextureImporter:
         width: 54
         height: 34
       alignment: 9
-      pivot: {x: 0.83788496, y: 0.9540799}
+      pivot: {x: 0.8338126, y: 0.9725464}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LeftFoot
+      name: L_Foot
       rect:
         serializedVersion: 2
         x: 325
@@ -312,7 +303,21 @@ TextureImporter:
         width: 38
         height: 52
       alignment: 9
-      pivot: {x: 0.25376812, y: 0.9408497}
+      pivot: {x: 0.22156806, y: 0.94461864}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: GunRevolver
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 421
+        width: 76
+        height: 37
+      alignment: 9
+      pivot: {x: 0.9154153, y: 0.5528581}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
