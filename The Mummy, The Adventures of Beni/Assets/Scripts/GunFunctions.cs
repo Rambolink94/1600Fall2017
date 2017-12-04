@@ -55,14 +55,12 @@ public class GunFunctions : MonoBehaviour {
         // What this does is simply creates and stores a point at the mouse position each time we shoot.
         Vector2 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint (Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
         Vector2 gunEndPosition = new Vector2(gunEnd.position.x, gunEnd.position.y);     //Finds and stores the location of the guns end in a Vector2.
-        RaycastHit2D hit = Physics2D.Raycast(gunEndPosition, mousePosition - gunEndPosition, gunRange, thingsToHit);
-        Debug.DrawLine (gunEndPosition, (mousePosition - gunEndPosition) * gunRange, Color.red);
+        RaycastHit2D hit = Physics2D.Raycast(gunEndPosition, gunEndPosition - mousePosition, gunRange, thingsToHit);
+        Debug.DrawLine (gunEndPosition, (gunEndPosition - mousePosition) * gunRange, Color.red);
         if (hit.collider != null)
         {
             Debug.DrawLine(gunEndPosition, hit.point, Color.yellow);
             Debug.Log(hit.collider.name + " was hit for: " + gunDamage + "damage.");
-            Debug.Log(mousePosition);
-            Debug.Log(gunEndPosition);
         }
     }
 }
