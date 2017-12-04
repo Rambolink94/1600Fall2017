@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     public bool facingRight = true;
     public bool isGrounded = false;
-    public static bool gameOver = true;
+    public static bool gameOver = false;
 
     void Start()
     {
@@ -28,18 +26,19 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, learnGround);
-        anim.SetBool("Ground", isGrounded);
-        float move = Input.GetAxis("Horizontal");
-        anim.SetFloat("Speed", Mathf.Abs(move));
-        rb.velocity = new Vector2(move * speed, rb.velocity.y);
-        if (move > 0 && !facingRight)
-        {
-            Flip();
-        } else if (move < 0 && facingRight)
-        {
-            Flip();
-        }
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, learnGround);
+            anim.SetBool("Ground", isGrounded);
+            float move = Input.GetAxis("Horizontal");
+            anim.SetFloat("Speed", Mathf.Abs(move));
+            rb.velocity = new Vector2(move * speed, rb.velocity.y);
+            if (move > 0 && !facingRight)
+            {
+                Flip();
+            }
+            else if (move < 0 && facingRight)
+            {
+                Flip();
+            }
     }
 
     void Update()
@@ -54,6 +53,14 @@ public class PlayerController : MonoBehaviour
     void Flip()
     {
         facingRight = !facingRight;
+        if (facingRight)
+        {
+            ArmRotation.RotDebug = -70;
+        }
+        else
+        {
+            ArmRotation.RotDebug = -112;
+        }
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
