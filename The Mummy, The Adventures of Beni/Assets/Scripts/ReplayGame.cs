@@ -24,7 +24,7 @@ public class ReplayGame : MonoBehaviour {
 
 	public void ClickReplay () 
 	{
-		PlayerController.gameOver = false;
+        PlayerController.gameOver = false;
         oldPosition = spReference.transform.position;
         player.position = oldPosition;
 		hBar.fillAmount = fillAmount;

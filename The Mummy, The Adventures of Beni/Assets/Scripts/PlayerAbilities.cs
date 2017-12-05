@@ -19,24 +19,12 @@ public class PlayerAbilities : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		if (Input.GetKeyDown (KeyCode.F)) 
+		if (Input.GetKeyDown (KeyCode.E)) 
 		{
             pBar.fillAmount -= powerUsage;
             var em = healthParticles.emission;
             em.enabled = true;
             Debug.Log("Das code hath been here");
 		}
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            pBar.fillAmount -= powerUsage;
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            pBar.fillAmount -= powerUsage;
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            sBar.fillAmount -= specialUsage;
-        }
     }
 }

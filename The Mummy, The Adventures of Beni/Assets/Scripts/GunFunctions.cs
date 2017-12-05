@@ -7,7 +7,10 @@ public class GunFunctions : MonoBehaviour {
     public float fireRate = 0;
     public float gunDamage = 10;
     public float gunRange = 100;
+    public float effectSpawnTime;
+    public float effectSpawnRate = 10;
     public LayerMask thingsToHit;
+    public Transform bulletTrail;
 
     public bool rangeTest = false;
 
@@ -56,11 +59,21 @@ public class GunFunctions : MonoBehaviour {
         Vector2 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint (Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
         Vector2 gunEndPosition = new Vector2(gunEnd.position.x, gunEnd.position.y);     //Finds and stores the location of the guns end in a Vector2.
         RaycastHit2D hit = Physics2D.Raycast(gunEndPosition, gunEndPosition - mousePosition, gunRange, thingsToHit);
+        if (Time.time >= effectSpawnTime)
+        {
+            ShotEffect();
+            effectSpawnTime = Time.time + 1 / effectSpawnRate;      //similar to what I did for gun fire rate, I created a rate at which effects spawn.
+        }
         Debug.DrawLine (gunEndPosition, (gunEndPosition - mousePosition) * gunRange, Color.red);
         if (hit.collider != null)
         {
             Debug.DrawLine(gunEndPosition, hit.point, Color.yellow);
             Debug.Log(hit.collider.name + " was hit for: " + gunDamage + "damage.");
         }
+    }
+
+    // Creates a bullet trail from the gun.
+    void ShotEffect() {
+        Instantiate(bulletTrail, gunEnd.position, gunEnd.rotation);
     }
 }

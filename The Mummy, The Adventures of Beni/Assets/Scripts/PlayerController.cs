@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public float groundRadius = 0.2f;
     public float jumpForce = 700f;
 
-    public bool facingRight = true;
+    public static bool facingRight = false;
     public bool isGrounded = false;
     public static bool gameOver = false;
 
