@@ -9,6 +9,7 @@ public class PowerUps : MonoBehaviour {
 	public Image pBar;
 	public Text endGameText;
 	public Text coinNum;
+    AudioSource coinCollectSound;
 	public int totalCoinValue;
 	public int coinValue = 10;
 	public float healthPowerLevel = 0.1f;
@@ -16,7 +17,12 @@ public class PowerUps : MonoBehaviour {
 	public float amountToAdd = 0.01f;
     public GameObject spReference;
 
-	public enum PowerUpType
+    void Start()
+    {
+        coinCollectSound = GetComponent<AudioSource>();
+    }
+
+    public enum PowerUpType
 	{
 		PowerUP,
 		PowerDown,
@@ -61,10 +67,16 @@ public class PowerUps : MonoBehaviour {
 			coinNum.text = (totalCoinValue++).ToString();
 			yield return new WaitForFixedUpdate();	
 		}
-	}
+        coinCollectSound.Play();
+        while (coinCollectSound.isPlaying == true) {
+            yield return new WaitUntil(() => coinCollectSound.isPlaying == false); 
+            // Interesting new code I learned about with kinda weird syntax. Allows a function to wait until a bool parameter is met.
+        }
+        Destroy(gameObject);
+    }
 
 	// Increasing Health
-	IEnumerator PowerUpBar () {
+	public IEnumerator PowerUpBar () {
 		float tempAmount = hBar.fillAmount + healthPowerLevel;
 		if (tempAmount > 1) 
 		{
@@ -75,6 +87,7 @@ public class PowerUps : MonoBehaviour {
 			hBar.fillAmount += amountToAdd;
 			yield return new WaitForSeconds (amountToAdd);
 		}
+        Destroy(gameObject);
 	}
 
 	// Decreasing Health
@@ -93,7 +106,8 @@ public class PowerUps : MonoBehaviour {
 		if (hBar.fillAmount == 0) {
 			EndGame ("Game Over");
 		}
-	}
+
+    }
 
     // Decreases Power
 	IEnumerator PowerPowerBar () {
@@ -107,7 +121,8 @@ public class PowerUps : MonoBehaviour {
 			pBar.fillAmount += amountToAdd;
 			yield return new WaitForSeconds (amountToAdd);
 		}
-	}
+        Destroy(gameObject);
+    }
 
     // Checkpoint
     void CheckPoint() {

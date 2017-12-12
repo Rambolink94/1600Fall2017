@@ -8,10 +8,13 @@ public class PowerUpCooldown : MonoBehaviour {
 
     void OnCollisionEnter2D()
     {
-        StartCoroutine (Cooldown);
+        Debug.Log("Got here");
+        StartCoroutine (Cooldown());
     }
 
     IEnumerator Cooldown() {
-        
+        this.gameObject.SetActive(false);
+        yield return new WaitForSeconds(powerUpCooldown);
+        this.gameObject.SetActive(true);
     }
 }
