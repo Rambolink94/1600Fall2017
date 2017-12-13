@@ -11,8 +11,11 @@ public class TrailMovement : MonoBehaviour {
         if (PlayerController.facingRight == false)
         {
             transform.Translate(Vector3.left * Time.deltaTime * movementSpeed);    //Moves bullet trail. Had to inverse to make work.
-        } else
-        transform.Translate(Vector3.right * Time.deltaTime * movementSpeed);    //Moves bullet trail
-        Destroy(gameObject, 1);    //Destroys bullet trail after 1 second.
+        }
+        else
+        {
+            transform.Translate(Vector3.right * Time.deltaTime * movementSpeed);    //Moves bullet trail
+            Destroy(gameObject, 1);    //Destroys bullet trail after 1 second.
+        }
 	}
 }
