@@ -29,6 +29,7 @@ public class AIBehavior : MonoBehaviour {
     }
 
     IEnumerator DeathEffects() {
+
         /*
        for (int i = 0; i < colorAlpha.Length; i++)
        {
@@ -45,8 +46,8 @@ public class AIBehavior : MonoBehaviour {
         {
             yield return new WaitUntil(() => deathEmitter.isPlaying == false);
         }
-        // Finally destroys the object
         */
+        // Finally destroys the object
         Destroy(gameObject);
         yield return null;
     }
