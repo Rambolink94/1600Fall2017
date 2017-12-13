@@ -12,12 +12,15 @@ public class GunFunctions : MonoBehaviour {
     public LayerMask thingsToHit;
     public Transform bulletTrail;
 
+    AudioSource gunFireSound;
+
     public bool rangeTest = false;
 
     private float timeToFire = 0;
     private Transform gunEnd;
 
 	void Awake () {
+        gunFireSound = GetComponent<AudioSource>();
         gunEnd = transform.Find("GunEnd");
         if (gunEnd == null)
         {
@@ -62,6 +65,7 @@ public class GunFunctions : MonoBehaviour {
         if (Time.time >= effectSpawnTime)
         {
             ShotEffect();
+            ShotSound();
             effectSpawnTime = Time.time + 1 / effectSpawnRate;      //similar to what I did for gun fire rate, I created a rate at which effects spawn.
         }
         Debug.DrawLine (gunEndPosition, (gunEndPosition - mousePosition) * gunRange, Color.red);
@@ -75,5 +79,10 @@ public class GunFunctions : MonoBehaviour {
     // Creates a bullet trail from the gun.
     void ShotEffect() {
         Instantiate(bulletTrail, gunEnd.position, gunEnd.rotation);
+    }
+
+    // Makes a sound when gun is shot.
+    void ShotSound() {
+        gunFireSound.Play();
     }
 }

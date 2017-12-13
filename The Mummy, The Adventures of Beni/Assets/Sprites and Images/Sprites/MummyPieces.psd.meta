@@ -1,13 +1,22 @@
 fileFormatVersion: 2
 guid: ebd1ba54020ea094791d00d70fe4c95e
-timeCreated: 1512422833
+timeCreated: 1513123888
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Head
+    21300002: R_UpperLeg
+    21300004: Body
+    21300006: Arm
+    21300008: R_LowerLeg
+    21300010: R_Foot
+    21300012: L_UpperLeg
+    21300014: L_LowerLeg
+    21300016: L_Foot
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -33,13 +42,13 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -47,9 +56,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
@@ -63,9 +72,151 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Head
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 665
+        width: 150
+        height: 217
+      alignment: 9
+      pivot: {x: 0.83392966, y: 0.1455157}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: R_UpperLeg
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 680
+        width: 151
+        height: 220
+      alignment: 9
+      pivot: {x: 0.84356546, y: 0.87404454}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Body
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 567
+        width: 217
+        height: 333
+      alignment: 9
+      pivot: {x: 0.64838886, y: 0.08097624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arm
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 354
+        width: 236
+        height: 255
+      alignment: 9
+      pivot: {x: 0.93206716, y: 0.668368}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: R_LowerLeg
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 440
+        width: 140
+        height: 228
+      alignment: 9
+      pivot: {x: 0.33388695, y: 0.9550733}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: R_Foot
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 304
+        width: 170
+        height: 84
+      alignment: 9
+      pivot: {x: 0.83673614, y: 0.88333714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: L_UpperLeg
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 28
+        width: 114
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.94048506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: L_LowerLeg
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 49
+        width: 163
+        height: 156
+      alignment: 9
+      pivot: {x: 0.2475775, y: 0.947227}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: L_Foot
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 64
+        width: 113
+        height: 122
+      alignment: 9
+      pivot: {x: 0.61081713, y: 0.89590603}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

@@ -9,7 +9,10 @@ public class PowerUps : MonoBehaviour {
 	public Image pBar;
 	public Text endGameText;
 	public Text coinNum;
-    AudioSource coinCollectSound;
+    AudioSource powerUpSounds;
+    public AudioClip[] hurtSoundsClips;
+    private AudioClip selectedSoundClip;
+    SpriteRenderer colorAlpha;
 	public int totalCoinValue;
 	public int coinValue = 10;
 	public float healthPowerLevel = 0.1f;
@@ -19,7 +22,8 @@ public class PowerUps : MonoBehaviour {
 
     void Start()
     {
-        coinCollectSound = GetComponent<AudioSource>();
+        powerUpSounds = GetComponent<AudioSource>();
+        colorAlpha = GetComponent<SpriteRenderer>();
     }
 
     public enum PowerUpType
@@ -67,9 +71,10 @@ public class PowerUps : MonoBehaviour {
 			coinNum.text = (totalCoinValue++).ToString();
 			yield return new WaitForFixedUpdate();	
 		}
-        coinCollectSound.Play();
-        while (coinCollectSound.isPlaying == true) {
-            yield return new WaitUntil(() => coinCollectSound.isPlaying == false); 
+        powerUpSounds.Play();
+        colorAlpha.color = new Color(1, 1, 1, 0);
+        while (powerUpSounds.isPlaying == true) {
+            yield return new WaitUntil(() => powerUpSounds.isPlaying == false); 
             // Interesting new code I learned about with kinda weird syntax. Allows a function to wait until a bool parameter is met.
         }
         Destroy(gameObject);
@@ -87,12 +92,20 @@ public class PowerUps : MonoBehaviour {
 			hBar.fillAmount += amountToAdd;
 			yield return new WaitForSeconds (amountToAdd);
 		}
+        powerUpSounds.Play();
+        colorAlpha.color = new Color(1, 1, 1, 0);
+        while (powerUpSounds.isPlaying == true)
+        {
+            yield return new WaitUntil(() => powerUpSounds.isPlaying == false);
+            // Interesting new code I learned about with kinda weird syntax. Allows a function to wait until a bool parameter is met.
+        }
         Destroy(gameObject);
-	}
+    }
 
 	// Decreasing Health
 	IEnumerator PowerDownBar () {
-		float tempAmount = hBar.fillAmount - healthPowerLevel;
+        PlayHurtSounds();
+        float tempAmount = hBar.fillAmount - healthPowerLevel;
 		if (tempAmount < 0) 
 		{
 			tempAmount = 0;
@@ -106,7 +119,6 @@ public class PowerUps : MonoBehaviour {
 		if (hBar.fillAmount == 0) {
 			EndGame ("Game Over");
 		}
-
     }
 
     // Decreases Power
@@ -121,11 +133,19 @@ public class PowerUps : MonoBehaviour {
 			pBar.fillAmount += amountToAdd;
 			yield return new WaitForSeconds (amountToAdd);
 		}
+        powerUpSounds.Play();
+        colorAlpha.color = new Color(1, 1, 1, 0);
+        while (powerUpSounds.isPlaying == true)
+        {
+            yield return new WaitUntil(() => powerUpSounds.isPlaying == false);
+            // Interesting new code I learned about with kinda weird syntax. Allows a function to wait until a bool parameter is met.
+        }
         Destroy(gameObject);
     }
 
     // Checkpoint
     void CheckPoint() {
+        powerUpSounds.Play();
         Debug.Log("Got here");
         spReference.transform.position = gameObject.transform.position;
     }
@@ -137,4 +157,15 @@ public class PowerUps : MonoBehaviour {
         Debug.Log("Got here");
 		PlayerController.gameOver = true;
 	}
+
+    void PlayHurtSounds() {
+        int index = Random.Range(0, hurtSoundsClips.Length);
+        selectedSoundClip = hurtSoundsClips[index];
+        powerUpSounds.clip = selectedSoundClip;
+        foreach (AudioClip audioclip in hurtSoundsClips)
+        {
+            Debug.Log("Currently playing " + selectedSoundClip.name + " from hurtSoundsClips Array.");
+        }
+        powerUpSounds.Play();
+    }
 }
