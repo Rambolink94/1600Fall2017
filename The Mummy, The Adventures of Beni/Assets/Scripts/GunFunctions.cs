@@ -9,6 +9,7 @@ public class GunFunctions : MonoBehaviour {
     public float gunRange = 100;
     public float effectSpawnTime;
     public float effectSpawnRate = 10;
+    public GameObject enemy;
     public LayerMask thingsToHit;
     public Transform bulletTrail;
 
@@ -72,6 +73,10 @@ public class GunFunctions : MonoBehaviour {
         if (hit.collider != null)
         {
             Debug.DrawLine(gunEndPosition, hit.point, Color.yellow);
+            if (hit.collider.gameObject == enemy)
+            {
+                AIBehavior.health -= 10f;
+            }
             Debug.Log(hit.collider.name + " was hit for: " + gunDamage + "damage.");
         }
     }

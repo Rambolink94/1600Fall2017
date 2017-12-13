@@ -1,25 +1,32 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AIBehavior : MonoBehaviour {
 
     public Transform player;
-    public float speed = 6;
-    public float minFollowDistance = 1;
-    public float maxFollowDistance = 20;
+    public ParticleSystem deathEmitter;
+    public NavMeshAgent agent;
+    public static float health = 50;
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.position) >= minFollowDistance)
+        // Makes AI follow player.
+        agent.destination = player.position;
+        agent.updateRotation = false;
+        if (health <= 0)
         {
-           transform.Translate (Vector2.MoveTowards(transform.position, player.position, maxFollowDistance) * speed * Time.deltaTime);
+            StartCoroutine(DeathEffects());
         }
+    }
 
-        if (Vector3.Distance(transform.position, player.position) <= maxFollowDistance)
+    IEnumerator DeathEffects() {
+        deathEmitter.Play();
+        if (deathEmitter.isPlaying == true)
         {
-            
+            yield return new WaitUntil(() => deathEmitter.isPlaying == false);
         }
+        Destroy(gameObject);
     }
 
 

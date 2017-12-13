@@ -13,6 +13,6 @@ public class TrailMovement : MonoBehaviour {
             transform.Translate(Vector3.left * Time.deltaTime * movementSpeed);    //Moves bullet trail. Had to inverse to make work.
         } else
         transform.Translate(Vector3.right * Time.deltaTime * movementSpeed);    //Moves bullet trail
-        Destroy(this.gameObject, 1);    //Destroys bullet trail after 1 second.
+        Destroy(gameObject, 1);    //Destroys bullet trail after 1 second.
 	}
 }
