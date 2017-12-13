@@ -9,6 +9,7 @@ public class GunFunctions : MonoBehaviour {
     public float gunRange = 100;
     public float effectSpawnTime;
     public float effectSpawnRate = 10;
+    public float enemyHealth;
     private GameObject[] enemies;
     public LayerMask thingsToHit;
     public Transform bulletTrail;
@@ -81,7 +82,8 @@ public class GunFunctions : MonoBehaviour {
                 {
                     if (enemy == i)
                     {
-                        Debug.Log(i.name);
+                        AIBehavior aiBehavior = enemy.GetComponent<AIBehavior>();
+                        aiBehavior.health -= 10;
                     }
                 }
             }
